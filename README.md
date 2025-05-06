@@ -20,4 +20,5 @@ df['is_reactivated'] = df['dco'] != pd.to_datetime('2099-12-31')
 
 df.loc[df['dco'].isna() & df['mon'].isna(), 'mon'] = '000'
 
+df.loc[df['dco'].isna() & df['mon'].isna(), 'mon'] = 0
 

@@ -11,3 +11,4 @@ df['dif'] = df['dif'].fillna(pd.to_datetime('2099-12-31'))
 
 df['residence'] = df['residence'].fillna('Non Reside')
 
+df.loc[df['dco'].isna() & df['Lib_ope'].isna(), 'Lib_ope'] = 'No reactivation'
